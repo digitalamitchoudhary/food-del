@@ -1,0 +1,11 @@
+.explore_menu{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    gap: 20px;
+}
+
+.explore_menu> h1{
+font-size: 40px;
+
+}

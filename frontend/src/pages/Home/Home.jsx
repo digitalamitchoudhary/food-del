@@ -4,14 +4,19 @@ import Hero from '../../components/Hero/Hero';
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu';
 
 function Home() {
-  const [category,setCategory]= useState("All");
+  
+    const [category, setCategory] = useState("All")
+
+
+ 
 
   return (
     <div >
 
       <Hero/>
-      <ExploreMenu category={category} setCategory={setCategory}/>   
-         </div>
+      <ExploreMenu category={category} setCategory={setCategory}/>
+    </div>
+    
   )
 }
 

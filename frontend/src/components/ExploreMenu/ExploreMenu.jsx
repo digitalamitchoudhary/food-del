@@ -3,7 +3,8 @@ import styles from './ExploreMenu.module.css'
 import { menu_list } from '../../assets/assets'
 
 
-function ExploreMenu() {
+function ExploreMenu({category,setCategory}) {
+  
   return (
     <div className={styles.explore_menu} id={styles.explore_menu}>
       <h1>Explore our menu </h1>
@@ -14,13 +15,13 @@ function ExploreMenu() {
 
         return(
           
-          <div key={i} className={styles.explore_menu_list_item }> 
-          <img src={item.menu_image} alt="" />
+          <div onClick={()=> setCategory(prev=>prev===item.menu_name?"All":item.menu_name)} key={i} className={styles.explore_menu_list_item }>  
+          <img  className={category===item.menu_name? styles.active :""} src={item.menu_image} alt="" />
           <p>{item.menu_name}</p>
-          
           </div>
         )
       })}</div>
+      <hr />
     </div>
   )
 }

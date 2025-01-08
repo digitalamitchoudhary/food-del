@@ -2,7 +2,7 @@ import React, { useContext} from 'react';
 import styles from './FoodItem.module.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
-function Fooditem({ id, name, price, description, image }) {
+function FoodItem({ id, name, price, description, image }) {
 
   // const [itemCount, setItemCount] = useState(0) 
  
@@ -49,4 +49,4 @@ function Fooditem({ id, name, price, description, image }) {
   );  
 }
 
-export default Fooditem;
+export default FoodItem;

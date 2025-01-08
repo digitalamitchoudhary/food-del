@@ -1,42 +1,42 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import { assets } from '../../assets/assets';
-
-function Navbar() {
+import { Link } from 'react-router-dom';
+ function Navbar() {
   const [menu, setMenu] = useState('home');
 
   return (
     <div className={styles.navbar}>
       <img src={assets.logo} alt="Logo" className={styles.logo} />
       <ul className={styles.navbar_menu}>
-        <li
+        <Link to='/'
           onClick={() => setMenu('home')}
           className={menu === 'home' ? styles.active : ''}
           aria-current={menu === 'home' ? 'page' : undefined}
         >
           home
-        </li>
-        <li
+        </Link>
+        <a href='/'
           onClick={() => setMenu('menu')}
           className={menu === 'menu' ? styles.active : ''}
           aria-current={menu === 'menu' ? 'page' : undefined}
         >
           menu
-        </li>
-        <li
+        </a>
+        <a
           onClick={() => setMenu('mobile-app')}
           className={menu === 'mobile-app' ? styles.active : ''}
           aria-current={menu === 'mobile-app' ? 'page' : undefined}
         >
           mobile-app
-        </li>
-        <li
+        </a>
+        <a
           onClick={() => setMenu('contact-us')}
           className={menu === 'contact-us' ? styles.active : ''}
           aria-current={menu === 'contact-us' ? 'page' : undefined}
         >
           contact us
-        </li>
+        </a>
       </ul>
       <div className={styles.navbar_right}>
         <img src={assets.search_icon} alt="Search Icon" />

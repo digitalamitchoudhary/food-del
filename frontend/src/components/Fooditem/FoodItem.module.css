@@ -12,25 +12,25 @@
     border-radius: 15px 15px 0px 0px ;  
 }  
 .foodItemInfo{  
-    padding: 18px;  
-    /* border: 2px saddlebrown solid;   */
+    padding: 20px;  
+    /* border: 1px saddlebrown solid;   */
 
 }
 .foodItemNameRating{  
     display: flex;  
     /* border: 2px saddlebrown solid;   */
     justify-content: space-between;  
-    align-items: canter;  
+    align-items: center;  
     margin-bottom: 10px;  
 }
 .foodItemNameRating p {  
-    font-size: 2.2vh;  
+    font-size: 20px;  
     font-weight: 500;  
     /* border: 2px saddlebrown solid;   */
 
 }  
-.foodItemNameRating img {  
-   max-width: 12vh;
+.foodItemNameRating > img {  
+    width: 70px;
 }  
 .foodItemDesc {  
     color: #676767;  

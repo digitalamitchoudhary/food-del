@@ -6,13 +6,17 @@ import Cart from './pages/Cart/Cart'
 
 import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
+import { useState } from 'react'
+import LoginPopup from './components/LoginPopup/LoginPopup'
 
 const App = () => {
+  const [showLogin, setShowLogin] = useState(false)
   return (
-    
+  
   <>
+  {showLogin?<LoginPopup/>:<></>}
     <div className='app'>
-      <Navbar />
+      <Navbar setShowLogin={setShowLogin} />
       
 
       <Routes>

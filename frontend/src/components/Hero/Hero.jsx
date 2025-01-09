@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 function Hero() {
 
   return (
-<div className={styles.hero}>
+<div className={styles.hero} id="tab" >
 
 <div className={styles.header_contents}>
   <h2>Order your favourite food here

@@ -4,7 +4,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div    className={styles.footer}  id={styles.footer}>
+    <div    className={styles.footer}  id='footer'>
       
     <div  className={styles.footerContent} >
         <div className={styles.footerContentLeft}>

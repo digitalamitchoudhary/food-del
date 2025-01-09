@@ -3,7 +3,7 @@ import styles from './AppDownload.module.css'
 import { assets } from '../../assets/assets'
 function AppDownload() {
   return (
-     <div className={styles.appDownload} id={styles.appDownload}>
+     <div className={styles.appDownload} id='appDownload'>
         
         <p>For Better Experince Download <br /> Tomato App</p>
 

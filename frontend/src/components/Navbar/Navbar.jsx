@@ -28,7 +28,7 @@ import { Link } from 'react-router-dom';
           className={menu === 'mobile-app' ? styles.active : ''}
           aria-current={menu === 'mobile-app' ? 'page' : undefined}
         >
-          Mobile-app
+          Mobile-App
         </a>
        <a href='#footer'
           onClick={() => setMenu('contact-us')}

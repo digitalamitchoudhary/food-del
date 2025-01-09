@@ -14,28 +14,28 @@ import { Link } from 'react-router-dom';
             className={menu === 'home' ? styles.active : ''}
             aria-current={menu === 'home' ? 'page' : undefined}
           >
-            home
+            Home
           </a>
         <a href='#explore-menu'
           onClick={() => setMenu('menu')}
           className={menu === 'menu' ? styles.active : ''}
           aria-current={menu === 'menu' ? 'page' : undefined}
         >
-          menu
+          Menu
         </a>
         <a href='#appDownload'
           onClick={() => setMenu('mobile-app')}
           className={menu === 'mobile-app' ? styles.active : ''}
           aria-current={menu === 'mobile-app' ? 'page' : undefined}
         >
-          mobile-app
+          Mobile-app
         </a>
        <a href='#footer'
           onClick={() => setMenu('contact-us')}
           className={menu === 'contact-us' ? styles.active : ''}
           aria-current={menu === 'contact-us' ? 'page' : undefined}
         >
-          contact us
+          Contact us
         </a>
       </ul>
       <div className={styles.navbar_right}>

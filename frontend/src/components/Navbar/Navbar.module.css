@@ -61,8 +61,7 @@
     border-radius: 50%;
     top: -8px;
     right: -8px;
-    display: none;
-}
+ }
 
 @media  (max-width:1050px){
     .navbar .logo{

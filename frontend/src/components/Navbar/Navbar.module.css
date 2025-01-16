@@ -7,7 +7,7 @@
     position: sticky;
     padding: 20px;
     z-index: 10;
-    width: 1140px;
+    max-width: 1140px;
     top: 0px;
     background-color: #f5f5f5ec;
     border-radius: 0px 0px 10px 10px;
@@ -15,7 +15,7 @@
 }
 
 .logo{
-    width: 150px;
+     width: 150px;
 }
 .navbar_menu{
     display: flex;
@@ -105,7 +105,42 @@
     }
 }
   @media (max-width:750px) {
+    .navbar{
+                padding: 10px;
+    }
+    .navbar button{
+        font-size: 14px;
+        color: #000000;
+        border: 1px solid tomato;
+        padding: 10px 10px ;
+         
+    }
     
+    .navbar_menu{
+        display: none;
+    }
+   
+}  
+@media (max-width:320px) {
+    .navbar{
+        padding-right: 10px;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .navbar .logo{
+        width: 100px;
+        }
+    .navbar button{
+        font-size: 14px;
+        color: #000000;
+        border: 1px solid tomato;
+        padding: 5px 5px ;
+         
+    }
+    .navbar_right{
+        gap: 10px;
+    }
     .navbar_menu{
         display: none;
     }

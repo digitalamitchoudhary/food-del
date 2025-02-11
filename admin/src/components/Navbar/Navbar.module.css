@@ -1,3 +1,17 @@
-.ss{
-    color: rgb(195, 0, 255);
+.navbar{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+
+.logo {
+    width: max(10%, 80px);
+    border: 1px solid red;
+
+}
+.profile{
+    width: 40px;
+    border: 1px solid red;
 }

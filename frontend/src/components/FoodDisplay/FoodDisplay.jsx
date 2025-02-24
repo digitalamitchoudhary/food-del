@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './FoodDisplay.module.css'
-import { food_list } from '../../assets/assets'
+// import { food_list } from '../../assets/assets'
+import { StoreContext } from '../../context/StoreContext'
+
 import FoodItem from '../Fooditem/FoodItem';
 function FoodDisplay({category}) {
+
+  const {food_list}=useContext(StoreContext)
+
+
   return (
     <div className={styles.foodDisplay} id={styles.foodDisplay}>
 
@@ -13,6 +19,7 @@ function FoodDisplay({category}) {
 
         {food_list.map((item, index)=>{
           // console.log(category,item.category);
+          // console.log( food_list);
           
           if (category==="All" || category===item.category) {
             return <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image}  />

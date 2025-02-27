@@ -80,6 +80,7 @@ function LoginPopup({ setShowLogin }) {
             type="email"
             placeholder="Your Email"
             required
+            autoComplete="username"
           />
           <input
             name="password"
@@ -87,7 +88,8 @@ function LoginPopup({ setShowLogin }) {
             value={data.password}
             type="password"
             placeholder="Password"
-            required
+            required 
+            autoComplete="current-password"
           />
         </div>
 

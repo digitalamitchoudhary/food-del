@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styles from './Cart.module.css';
  import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 
 function Cart() {
   const { cartItems, food_list, removeFromCart,getTotalCartAmount,url } = useContext(StoreContext);
-
+  
     const navigate = useNavigate();
   return (
     <div className={styles.cart}>

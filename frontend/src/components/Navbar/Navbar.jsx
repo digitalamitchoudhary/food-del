@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
  function Navbar({setShowLogin}) {
   const [menu, setMenu] = useState('home');
-  const {getTotalCartAmount,token,setToken}=useContext(StoreContext);
+  const {getTotalCartAmount,token,setToken,setCartItems}=useContext(StoreContext);
    
      
   const navigate = useNavigate();
@@ -13,6 +13,7 @@ import { StoreContext } from '../../context/StoreContext';
       localStorage.removeItem("token");
       setToken("");
       navigate("/");
+      setCartItems("")
   }
   return (
     <div className={styles.navbar}>

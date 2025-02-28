@@ -66,6 +66,12 @@ const loadCartData = async (token) => {
     loadData();
   }, []);
 
+  useEffect(() => {
+    if (token) {
+      loadCartData(token);
+    }
+  }, [token]);
+
   const contextValue = {  
     food_list,  
     cartItems,  

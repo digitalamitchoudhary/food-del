@@ -2,7 +2,7 @@ import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
 import validator from "validator"
-import { response } from "express";
+ 
 
 
 //login user
@@ -21,7 +21,9 @@ const loginUser = async (req,res)=>{
         }
         const token=createToken(user._id);
         res.json({success:true,token})
-
+        localStorage.setItem("token", res.data.token);
+        setToken(res.data.token);  // 🛠 Token update ho raha hai
+        loadCartData(res.data.token); // 🛠 Login ke turant baad cart load hoga
 
     } catch (error) {
         console.log(error);

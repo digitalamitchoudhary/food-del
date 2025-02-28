@@ -56,7 +56,8 @@ function Cart() {
             <hr />
             <div className={styles.cartTotalDetails}>
               <p>Delivery Fee</p>
-              <p>${getTotalCartAmount()===0?0:2}</p>  
+              <p>
+              ₹ {getTotalCartAmount()===0?0:2}</p>  
               </div>
             <hr />
             <div className={styles.cartTotalDetails}>

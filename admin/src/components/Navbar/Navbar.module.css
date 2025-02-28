@@ -1,5 +1,5 @@
 .navbar{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,10 +8,10 @@
 
 .logo {
     width: max(10%, 80px);
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 .profile{
     width: 40px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }

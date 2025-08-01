@@ -49,6 +49,9 @@ function Footer() {
 
     </div>
     <hr/>
+     <div class="su"><a class="custom-link" href="https://digitalamitchoudhary.com/" target="_blank">
+            Made with <span class="heart">❤</span> by Digitalamitchoudhary
+          </a></div>
     <p className="footer-copyright">Copyright 2024  © Tomato.com - All Right Reserved.</p>
     </div>
   )    

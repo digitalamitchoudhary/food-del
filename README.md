@@ -37,22 +37,4 @@ A full-featured food delivery website built using the **MERN Stack** (MongoDB, E
 ---
 
 ## 📂 Project Structure
-
-project-root/
-│
-├── client/ # React frontend
-│ ├── public/
-│ └── src/
-│ ├── components/
-│ ├── pages/
-│ ├── context/
-│ └── App.js
-│
-├── server/ # Express backend
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ └── server.js
-│
-├── .env.example # Sample environment variables
-├── README.md # Project documentation
+ 

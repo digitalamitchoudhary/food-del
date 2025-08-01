@@ -32,7 +32,7 @@ A full-featured food delivery website built using the **MERN Stack** (MongoDB, E
 
 ### Other:
 - Render (for deployment)
-- Razorpay/Stripe (for payments)
+- stripe (for payments)
 
 ---
 

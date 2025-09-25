@@ -47,11 +47,27 @@ const onLogin = async (event) => {
      const encryptedEmail = CryptoJS.AES.encrypt(data.email, secretKey).toString();
     //  console.log("Encrypted Email:", encryptedEmail); // Debugging
 
-  const secureData = {
-    ...data,
+ // const secureData = {
+  //   ...data,
+  //   email: encryptedEmail,
+  //   password: encryptedPassword, // 🛠 Encrypt password send kar rahe hain
+  // };
+
+let secureData;
+if (currState === "Login") {
+  secureData = {
+    email: encryptedEmail,
+    password: encryptedPassword,
+  };
+} else {
+  // Sign-Up
+  secureData = {
+    name: data.name,
     email: encryptedEmail,
     password: encryptedPassword, // 🛠 Encrypt password send kar rahe hain
   };
+}
+  
 
   const response = await axios.post(newUrl, secureData);
 

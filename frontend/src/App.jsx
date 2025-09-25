@@ -6,19 +6,21 @@ import Cart from './pages/Cart/Cart'
 
 import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
+import { StoreContext } from '../../frontend/src/context/StoreContext';
 
 const App = () => {
-  const [showLogin, setShowLogin] = useState(false)
-  return (
+    const {setShowLogin,showLogin}=useContext(StoreContext);
+  
+   return (
   
   <>
   {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
     <div className='app'>
-      <Navbar setShowLogin={setShowLogin} />
+      <Navbar/>
       
 
       <Routes>

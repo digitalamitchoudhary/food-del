@@ -3,9 +3,9 @@ import styles from './Navbar.module.css';
 import { assets } from '../../assets/assets';
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
- function Navbar({setShowLogin}) {
+ function Navbar() {
   const [menu, setMenu] = useState('home');
-  const {getTotalCartAmount,token,setToken,setCartItems}=useContext(StoreContext);
+  const {getTotalCartAmount,token,setToken,setCartItems,setShowLogin}=useContext(StoreContext);
    
      
   const navigate = useNavigate();

@@ -4,7 +4,19 @@ import styles from './Cart.module.css';
 import { StoreContext } from '../../context/StoreContext';
 
 function Cart() {
-  const { cartItems, food_list, removeFromCart,getTotalCartAmount,url } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart,getTotalCartAmount,url , token, setShowLogin } = useContext(StoreContext);
+  
+const handleCheckout = () => {
+  if (!token) {
+    // User logged in nahi hai
+    setShowLogin(true); // Login popup open karo
+    return; // Navigate nahi karna
+  }
+
+  // User logged in hai, order page pe bhejo
+  navigate('/order');
+};
+
   
     const navigate = useNavigate();
   return (
@@ -65,9 +77,13 @@ function Cart() {
               <b> ₹ {getTotalCartAmount()===0?0: getTotalCartAmount()+2}</b>
             </div>
           </div>
-          <button onClick={() => navigate('/order')}>
+          {/* <button onClick={() => navigate('/order')}>
               PROCEED TO CHECKOUT
-            </button>
+            </button> */}
+            <button onClick={handleCheckout}>
+    PROCEED TO CHECKOUT
+</button>
+
         </div>
         <div className={styles.cartPromocode}>
           <div>

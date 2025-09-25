@@ -52,7 +52,7 @@ function Footer() {
     <p className={styles.footerCopyright}>
          <a href="https://digitalamitchoudhary.com/" target="_blank">
           Made with <span className={styles.heart}>❤</span> by
-          Digitalamitchoudhary
+          Digitalamitchoudharys
         </a>
       </p>
     </div>

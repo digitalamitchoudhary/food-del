@@ -22,7 +22,7 @@ A full-featured food delivery website built using the **MERN Stack** (MongoDB, E
 ### Frontend:
 - React.js
 - React Router
-- TailwindCSS / CSS
+- CSS
 
 ### Backend:
 - Node.js

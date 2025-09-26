@@ -37,7 +37,7 @@ Includes a **dedicated Admin Panel** for managing menu items and orders.
 * React Router 7
 * Context API for global state management
 * Axios for API calls
-* (Optional) TailwindCSS / custom CSS for styling
+* Custom CSS for styling
 
 ### Backend API:
 

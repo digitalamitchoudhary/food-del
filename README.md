@@ -1,40 +1,78 @@
-# 🍽️ Tomato – Food Delivery Web App
+ 
 
-A full-featured food delivery website built using the **MERN Stack** (MongoDB, Express, React, Node.js). Users can explore a variety of food categories, place orders, track delivery, and make secure payments — all in one platform.
+# 🍽️ **Tomato – Full-Stack Food Delivery Web App**
 
-🚀 **Live Site:** [https://food-del-frontend-7vmr.onrender.com/](https://food-del-frontend-7vmr.onrender.com/)
+A modern **food delivery platform** built with the **MERN Stack** (MongoDB, Express, React, Node.js).
+Customers can explore menus, add items to their cart, place orders, track delivery status, and make secure payments — all in one responsive web app.
+Includes a **dedicated Admin Panel** for managing menu items and orders.
 
----
-
-## 🔍 Features
-
-- 🍔 Browse food items by category
-- 🛒 Add to cart and place orders
-- 📦 Track your order status
-- 💳 Integrated payment gateway
-- 📱 Responsive UI for desktop and mobile
-- 🔐 User authentication & order history
+🚀 **Live Demo:** [food-del-frontend-7vmr.onrender.com](https://food-del-frontend-7vmr.onrender.com)
 
 ---
 
-## 🛠️ Tech Stack
+## 🔍 **Features**
 
-### Frontend:
-- React.js
-- React Router
-- CSS
+### 👤 User Side
 
-### Backend:
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
+* 🍔 **Browse & Search:** View food items by category
+* 🛒 **Smart Cart:** Add items to cart (local + server sync)
+* 📦 **Order Tracking:** Real-time status updates
+* 💳 **Secure Payments:** Integrated payment gateway (Stripe)
+* 🔐 **Authentication:** Sign up / login with JWT, view order history
+* 📱 **Responsive UI:** Optimized for mobile & desktop
 
-### Other:
-- Render (for deployment)
-- stripe (for payments)
+### 🛠 Admin Panel
+
+* 📑 Add / edit / delete menu items
+* 📦 Manage customer orders (update status)
+* 📊 View sales & order analytics
 
 ---
 
-## 📂 Project Structure
+## 🛠️ **Tech Stack**
+
+### Frontend (User + Admin):
+
+* React.js 18 (Vite for fast builds)
+* React Router 7
+* Context API for global state management
+* Axios for API calls
+* (Optional) TailwindCSS / custom CSS for styling
+
+### Backend API:
+
+* Node.js + Express.js
+* MongoDB (Mongoose)
+* JWT Authentication (secure endpoints)
+* Stripe payment integration
+* Hosted on Render
+
+### Other Tools:
+
+* LocalStorage for offline cart persistence
+* RESTful API architecture
+* CORS & security middleware
+
+---
+
+## 📂 **Project Structure**
+
+```
+tomato-food-app/
+├── frontend/       # React customer-facing app
+├── admin-panel/    # React admin dashboard
+└── backend/        # Node.js + Express + MongoDB API
+```
+
+---
+
+### 🌟 **Highlights**
+
+* **Smart Cart Merge:** Local cart items automatically sync with server after login
+* **Admin Dashboard:** Manage menu items & orders in real time
+* **Full-Stack Deployment:** Deployed on Render with a production-ready build
+* **Scalable Architecture:** Clean separation of frontend, admin, and backend
+
+---
+
  

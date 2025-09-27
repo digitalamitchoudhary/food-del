@@ -67,18 +67,20 @@ const registerUser = async (req,res)=>{
         if(!validator.isEmail(email)){
             return res.json({success:false,message:"Please Enter a valid E-mail"})
         }
-        if(password.length<8){
-            return res.json({success:false,message:"Please enter a strong password"})
-        }
-
+      
       
 
          // 🔓 Decrypt password 
          const bytes = CryptoJS.AES.decrypt(password, "mySecretKey");
          const decryptedPassword = bytes.toString(CryptoJS.enc.Utf8);
 
-        //  console.log("Password hai ye :", password);
-        //  console.log("Password hai jo ja rhe :", decryptedPassword); 
+        //  console.log("Password hai ye :", decryptedPassword);
+        //  console.log("Password hai jo ja rhe :",password); 
+
+          if(decryptedPassword.length<8){
+            return res.json({success:false,message:"Please enter a strong password"})
+        }
+
         //hashing user password
         const salt= await bcrypt.genSalt(10)
         const hashedPassword = await bcrypt.hash(decryptedPassword,salt);

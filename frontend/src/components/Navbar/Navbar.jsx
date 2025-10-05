@@ -45,7 +45,7 @@ import { StoreContext } from '../../context/StoreContext';
         Menu
       </a>
     ) : (
-      <a href="/#explore-menu"
+      <a href="/"
          onClick={() => setMenu('menu')}
          className={menu === 'menu' ? styles.active : ''}>
         Menu
@@ -61,7 +61,7 @@ import { StoreContext } from '../../context/StoreContext';
         Mobile-App
       </a>
     ) : (
-      <a href="/#appDownload"
+      <a href="/"
          onClick={() => setMenu('mobile-app')}
          className={menu === 'mobile-app' ? styles.active : ''}>
         Mobile-App
@@ -77,7 +77,7 @@ import { StoreContext } from '../../context/StoreContext';
         Contact Us
       </a>
     ) : (
-      <a href="/#footer"
+      <a href="/"
          onClick={() => setMenu('contact-us')}
          className={menu === 'contact-us' ? styles.active : ''}>
         Contact Us
@@ -109,4 +109,5 @@ import { StoreContext } from '../../context/StoreContext';
 }
 
 export default Navbar;
+
 

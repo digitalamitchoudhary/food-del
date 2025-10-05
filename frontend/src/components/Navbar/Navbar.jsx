@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
 import styles from './Navbar.module.css';
 import { assets } from '../../assets/assets';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
  function Navbar() {
   const [menu, setMenu] = useState('home');
   const {getTotalCartAmount,token,setToken,setCartItems,setShowLogin}=useContext(StoreContext);
    
+  const location = useLocation();
+  const ishomePage = location.pathname === "/";
      
   const navigate = useNavigate();
   const logout =()=>{
@@ -18,36 +20,72 @@ import { StoreContext } from '../../context/StoreContext';
   return (
     <div className={styles.navbar}>
       <Link to='/'><img src={assets.logo} alt="Logo" className={styles.logo} /></Link>
-      <ul className={styles.navbar_menu}>
-          <a href='#tab'
-            onClick={() => setMenu('home')}
-            className={menu === 'home' ? styles.active : ''}
-            aria-current={menu === 'home' ? 'page' : undefined}
-          >
-            Home
-          </a>
-        <a href='#explore-menu'
-          onClick={() => setMenu('menu')}
-          className={menu === 'menu' ? styles.active : ''}
-          aria-current={menu === 'menu' ? 'page' : undefined}
-        >
-          Menu
-        </a>
-        <a href='#appDownload'
-          onClick={() => setMenu('mobile-app')}
-          className={menu === 'mobile-app' ? styles.active : ''}
-          aria-current={menu === 'mobile-app' ? 'page' : undefined}
-        >
-          Mobile-App
-        </a>
-       <a href='#footer'
-          onClick={() => setMenu('contact-us')}
-          className={menu === 'contact-us' ? styles.active : ''}
-          aria-current={menu === 'contact-us' ? 'page' : undefined}
-        >
-          Contact us
-        </a>
-      </ul>
+     <ul className={styles.navbar_menu}>
+  <li>
+    {ishomePage ? (
+      <a href="#tab"
+         onClick={() => setMenu('home')}
+         className={menu === 'home' ? styles.active : ''}>
+        Home
+      </a>
+    ) : (
+      <a href="/"
+         onClick={() => setMenu('home')}
+         className={menu === 'home' ? styles.active : ''}>
+        Home
+      </a>
+    )}
+  </li>
+
+  <li>
+    {ishomePage ? (
+      <a href="#explore-menu"
+         onClick={() => setMenu('menu')}
+         className={menu === 'menu' ? styles.active : ''}>
+        Menu
+      </a>
+    ) : (
+      <a href="/#explore-menu"
+         onClick={() => setMenu('menu')}
+         className={menu === 'menu' ? styles.active : ''}>
+        Menu
+      </a>
+    )}
+  </li>
+
+  <li>
+    {ishomePage ? (
+      <a href="#appDownload"
+         onClick={() => setMenu('mobile-app')}
+         className={menu === 'mobile-app' ? styles.active : ''}>
+        Mobile-App
+      </a>
+    ) : (
+      <a href="/#appDownload"
+         onClick={() => setMenu('mobile-app')}
+         className={menu === 'mobile-app' ? styles.active : ''}>
+        Mobile-App
+      </a>
+    )}
+  </li>
+
+  <li>
+    {ishomePage ? (
+      <a href="#footer"
+         onClick={() => setMenu('contact-us')}
+         className={menu === 'contact-us' ? styles.active : ''}>
+        Contact Us
+      </a>
+    ) : (
+      <a href="/#footer"
+         onClick={() => setMenu('contact-us')}
+         className={menu === 'contact-us' ? styles.active : ''}>
+        Contact Us
+      </a>
+    )}
+  </li>
+</ul>
+
       <div className={styles.navbar_right}>
         <img src={assets.search_icon} alt="Search Icon" />
         <div className={styles.navbar_basket}>
@@ -71,3 +109,4 @@ import { StoreContext } from '../../context/StoreContext';
 }
 
 export default Navbar;
+

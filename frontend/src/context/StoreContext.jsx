@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { createContext, useState, useEffect } from 'react';
 // import { food_list } from "../assets/assets";
-
-export const StoreContext = createContext(null);
+ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = 'https://food-del-backend-p7zz.onrender.com';
+     const url = import.meta.env.VITE_API_URL || `http://localhost:${import.meta.env.VITE_PORT}`;
+
 
   const [food_list, setFoodList] = useState([]);
 
